@@ -1,0 +1,20 @@
+{
+  "name": "artillery-engine-sse",
+  "version": "0.0.1",
+  "description": "SSE (server-sent events) support for Artillery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "async": "^3.2.4",
+    "eventsource": "^2.0.2"
+  },
+  "devDependencies": {
+    "express": "^4.18.2",
+    "ssestream": "^1.1.0"
+  }
+}

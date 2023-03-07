@@ -1,0 +1,22 @@
+# The target is the server in sse-server.js
+config:
+  target: http://localhost:8080/sse
+  processor: ./helpers.js
+  phases:
+    - duration: 10
+      arrivalRate: 1
+  engines:
+    sse: {}
+      # withCredentials: false
+scenarios:
+  - engine: sse
+    onMessage: handleSSEMessage
+    onEvent:
+      - eventName: server-time
+        handler: onServerTime
+    flow:
+      - open
+      - log: opened
+      - think: 10
+      - log: closing
+      - close
